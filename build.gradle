@@ -1,8 +1,10 @@
 apply plugin: 'java'
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 dependencies {
     testCompile 'junit:junit:4.12'
+    testCompile 'info.cukes:cucumber-junit:1.2.5'
+    testCompile 'info.cukes:cucumber-java:1.2.5'
 }
