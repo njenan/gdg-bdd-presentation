@@ -1,6 +1,7 @@
 package com.me.bookstore;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -15,8 +16,12 @@ public class BooksResource {
         BooksResource.numberOfBooks = numberOfBooks;
     }
 
-    @RequestMapping("/books")
+    @RequestMapping(value = "/books", method = RequestMethod.GET)
     public Integer books() {
         return BooksResource.numberOfBooks;
+    }
+
+    public void addBook() {
+        BooksResource.numberOfBooks++;
     }
 }

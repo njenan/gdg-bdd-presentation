@@ -6,9 +6,9 @@ Feature: Browse Bookstore
   Scenario: Get Catalog List
     Given there are 1 books for sale
     When I request the book catalog
-    Then I should see 1 book
+    Then I should see 1 books for sale
     
   Scenario: Get Catalog List
     Given there are 3 books for sale
     When I request the book catalog
-    Then I should see 3 books
+    Then I should see 3 books for sale
