@@ -11,9 +11,9 @@ public class FibonacciSteps {
     private int index;
     private int result;
 
-    @Given("^I want the first fibonacci number$")
-    public void i_want_the_first_fibonacci_number() throws Throwable {
-        index = 1;
+    @Given("^I want fibonacci number (\\d+)$")
+    public void i_want_the_x_fibonacci_number(int number) throws Throwable {
+        index = number;
     }
 
     @When("^I use the calculator$")
@@ -25,5 +25,5 @@ public class FibonacciSteps {
     public void i_should_get_the_number(int arg1) throws Throwable {
         assertEquals(arg1, result);
     }
-    
+
 }
